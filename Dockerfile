@@ -10,7 +10,7 @@ rm -rf /var/lib/apt/lists/* && \
 apt-get clean 
 
 ADD btsync.conf /etc/
-VOLUME /btsync/share
+VOLUME /btsync/share /btsync/.sync
 EXPOSE 8888
 USER btsync
 ENTRYPOINT /btsync/btsync --config /etc/btsync.conf --nodaemon
