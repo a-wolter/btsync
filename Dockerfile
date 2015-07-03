@@ -9,7 +9,7 @@ wget -O - http://download-cdn.getsyncapp.com/stable/linux-x64/BitTorrent-Sync_x6
 rm -rf /var/lib/apt/lists/* && \
 apt-get clean 
 
-ADD /etc/btsync.conf /etc/
+ADD btsync.conf /etc/
 VOLUME /btsync/share
 EXPOSE 8888
 USER btsync
